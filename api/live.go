@@ -75,7 +75,7 @@ func Handler(w http.ResponseWriter, r *http.Request)  {
         // 油管
         ytbObj := &liveurls.Youtube{}
         ytbObj.Rid = rid
-        ytbObj.Quality = util.DefaultQuery(r, "quality", "480")
+        ytbObj.Quality = util.DefaultQuery(r, "quality", "1080")
         http.Redirect(w, r, util.Duanyan(adurl, ytbObj.GetLiveUrl()), http.StatusMovedPermanently)
       case "yy":
         // YY直播
